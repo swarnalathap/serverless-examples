@@ -1,4 +1,5 @@
 module.exports = x => {
+    var start = new Date().getTime();
     const xx = x * 10;
     console.log(`the square of ${x} is ${xx}`);
     i = 0; j = 0;
@@ -10,5 +11,6 @@ module.exports = x => {
     }
     var waitTill = new Date(new Date().getTime() + 10 * 1000);
     while(waitTill > new Date()){}
-    return xx;
+    var end = new Date().getTime();
+    return end-start;
 }
